@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa María Grill - Gastro Bar</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon circular -->
+  <link rel="icon" href="smg.png" type="image/png" id="favicon">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.querySelector("#favicon");
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      const img = new Image();
+      img.src = link.href;
+      img.onload = () => {
+        const size = 64;
+        canvas.width = size;
+        canvas.height = size;
+        ctx.beginPath();
+        ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+        ctx.clip();
+        ctx.drawImage(img, 0, 0, size, size);
+        link.href = canvas.toDataURL("image/png");
+      };
+    });
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <img src="smg.png" alt="Santa María Grill logo" class="logo" />
+    <h1>Santa María Grill</h1>
+    <p class="subtitle">Gastro Bar</p>
+  </header>
+
+  <main class="menu">
+    <h2>Menú Principal</h2>
+
+    <!-- Entradas -->
+    <section class="menu-section">
+      <h3>🥟 Entradas</h3>
+      <ul>
+        <li><span>Chorizo artesanal a la parrilla</span><span>$12.000</span></li>
+        <li><span>Chunchullo crocante</span><span>$10.000</span></li>
+        <li><span>Mix chunchullo y chorizo</span><span>$14.000</span></li>
+      </ul>
+      <p class="desc">Sabores criollos a la parrilla servidos con arepa, limón y guacamole.</p>
+    </section>
+
+    <!-- Chorizos -->
+    <section class="menu-section">
+      <h3>🌭 Nuestros Chorizos</h3>
+      <ul>
+        <li><span>Chorizo artesanal</span><span>$7.000</span></li>
+        <li><span>Choripán artesanal</span><span>$7.000</span></li>
+        <li><span>Choripán Santa María</span><span>$10.000</span></li>
+      </ul>
+      <p class="desc">Receta 100% artesanal, dorados a la parrilla y servidos con pan o arepa, queso y salsas de la casa.</p>
+    </section>
+
+    <!-- Hamburguesas -->
+    <section class="menu-section">
+      <h3>🍔 Hamburguesas</h3>
+      <ul>
+        <li><span>Res sencilla</span><span>$15.000</span></li>
+        <li><span>Pollo sencilla</span><span>$15.000</span></li>
+        <li><span>Mixta</span><span>$21.000</span></li>
+        <li><span>Mixta especial</span><span>$24.000</span></li>
+        <li><span>Santa María</span><span>$30.000</span></li>
+      </ul>
+      <p class="desc">100% a la parrilla con pan dorado, queso cheddar, tocineta y papas chip.</p>
+    </section>
+
+    <!-- Parrilla -->
+    <section class="menu-section">
+      <h3>🥩 Cortes Santa María Grill</h3>
+      <ul>
+        <li><span>Punta de anca (330g)</span><span>$30.000</span></li>
+        <li><span>Churrasco (330g)</span><span>$30.000</span></li>
+        <li><span>Morillo (300g)</span><span>$26.000</span></li>
+        <li><span>Tabla mixta parrillera</span><span>$32.000</span></li>
+        <li><span>Pechuga de pollo</span><span>$26.000</span></li>
+      </ul>
+      <p class="desc">Jugosos cortes a la parrilla con papa salada, arepa y guacamole.</p>
+    </section>
+
+    <!-- Domingo -->
+    <section class="menu-section">
+      <h3>🍲 Domingos Especiales</h3>
+      <ul>
+        <li><span>Sopa del día al fogón de leña</span><span>$13.000</span></li>
+        <li><span>Plato típico del día</span><span>$18.000</span></li>
+      </ul>
+      <p class="desc">Preparaciones caseras cocinadas al estilo tradicional colombiano.</p>
+    </section>
+
+    <!-- Bebidas -->
+    <section class="menu-section">
+      <h3>🍹 Bebidas</h3>
+      <ul>
+        <li><span>Limonada villetana (jarra)</span><span>$6.000</span></li>
+        <li><span>Gaseosa 400ml</span><span>$4.000</span></li>
+        <li><span>Gaseosa 250ml</span><span>$2.500</span></li>
+        <li><span>Agua en botella</span><span>$3.000</span></li>
+        <li><span>Mr Tea</span><span>$3.000</span></li>
+        <li><span>Jugo Hit</span><span>$3.000</span></li>
+      </ul>
+    </section>
+
+    <!-- Cervezas -->
+    <section class="menu-section">
+      <h3>🍺 Cervezas</h3>
+      <ul>
+        <li><span>Coronita / Sol / Budweiser</span><span>$4.000</span></li>
+        <li><span>Águila / Poker</span><span>$3.000</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>📍 Calle 123 #45-67 | Tel: 320 123 4567</p>
+    <p>© 2025 Santa María Grill - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
